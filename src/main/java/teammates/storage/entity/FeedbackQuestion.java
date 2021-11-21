@@ -130,7 +130,7 @@ public class FeedbackQuestion extends BaseEntity {
         // resulting in incompatibility with old data.
         // Last four characters (ogEA) of the base64 encoded string are trimmed for backward compatibility.
         // Additional changes are needed for production system case, possibly due to very old Datastore instance used.
-        String[] words=s1.split("ogEA");//splits the string based on string
+        String[] words=untrimmedId.split("ogEA");//splits the string based on string
         for(String w:words){
             newString = newString+w;
         }
